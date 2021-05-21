@@ -1,16 +1,18 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
+const connectDB = require('./config/db');
 const mongoose = require('mongoose');
 const path = require('path');
 
 app.use(cors());
 app.use(express.json({ extended: false }));
 
-mongoose.connect('mongodb+srv://kkUser:sanchez@kubus.skllo.mongodb.net/kubkoDB', {
-	useNewUrlParser: true,
-	useUnifiedTopology: true
-});
+// mongoose.connect('mongodb+srv://kkUser:sanchez@kubus.skllo.mongodb.net/kubkoDB', {
+// 	useNewUrlParser: true,
+// 	useUnifiedTopology: true
+// });
+connectDB();
 
 app.use('/', require('./routes/foodRoute'));
 app.use('/', require('./routes/walkRoute'));
