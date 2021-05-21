@@ -43,7 +43,7 @@ export default function WalkEntry() {
         <form className="submit-form">
         <div>
             <div className="form-group">
-                <label htmlFor="walkTime">The walk was </label>
+                <label htmlFor="walkTime">The walk was  </label>
                 <input type="number" id="walkDuration" name="walkDuration"  onChange={handleChange} ></input>
                 <label htmlFor="walkTime"> minutes.</label>
             </div>
