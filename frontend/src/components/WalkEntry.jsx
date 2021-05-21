@@ -33,7 +33,7 @@ export default function WalkEntry() {
             pooped: poopedChecked,
             peed: peedChecked
         };
-        axios.post("http://localhost:4005/walk",newWalkEntry);
+        axios.post("/walk",newWalkEntry);
 
 
     }
