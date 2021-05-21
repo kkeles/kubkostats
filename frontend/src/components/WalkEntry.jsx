@@ -33,7 +33,7 @@ export default function WalkEntry() {
             pooped: poopedChecked,
             peed: peedChecked
         };
-        axios.post("https://obscure-thicket-50497.herokuapp.com/walk",newWalkEntry);
+        axios.post("http://localhost:4005/walk",newWalkEntry);
 
 
     }
