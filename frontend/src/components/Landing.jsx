@@ -9,7 +9,7 @@ import LandingIcon from "./LandingIcon";
 export default function Landing() {
     return <div className="landing">
         <div className="icons-left">
-            <LandingIcon imgSource={kubko2} imgAlt={"kubko running"} />
+            <LandingIcon imgSource={kubko2} imgAlt={"kubko running fast!"} />
             <LandingIcon imgSource={kubko1} imgAlt={"kubko sleeping"} />
             <LandingIcon imgSource={kubko6} imgAlt={"kubko with papa"} />
         </div>
