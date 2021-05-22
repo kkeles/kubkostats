@@ -14,7 +14,7 @@ export default function WalkEntry() {
         setPeedChecked(!peedChecked);
     }
 
-
+    const baseURL = process.env.baseURL || "http://localhost:4005";
 
     const handleChange = evt => {
         const {name,value} = evt.target;
@@ -33,7 +33,7 @@ export default function WalkEntry() {
             pooped: poopedChecked,
             peed: peedChecked
         };
-        axios.post("http://localhost:4005/walk",newWalkEntry);
+        axios.post(`${baseURL}/walk`,newWalkEntry);
 
 
     }
