@@ -18,6 +18,8 @@ export default function FoodEntry() {
         })
     }
 
+    const baseURL = process.env.baseURL || "http://localhost:4005";
+
     const handleClick = (evt) => {        
         let isTreated = false;
         if (foodEntry.treatQuantity > 0) {isTreated = true}
@@ -29,7 +31,7 @@ export default function FoodEntry() {
             treatQuantity: parseInt(foodEntry.treatQuantity)
         }
 
-        axios.post("http://localhost:4005/food",newFoodEntry)
+        axios.post(`${baseURL}/food`,newFoodEntry)
     }
 
     return <div className="food-entry">
